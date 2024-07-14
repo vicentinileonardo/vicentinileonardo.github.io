@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leonardo Vicentini</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on Leonardo Vicentini</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>//localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/about/</guid>
+      <description>My research interests include distributed systems, cloud computing, data engineering, and software engineering in general.&#xA;Currently doing an internship at the European Space Agency, as a Software Engineer (Cloud &amp;amp; Infrastructure). In particular, I am working in the Mission Operations Infrastucture IT section at the European Space Operations Centre (ESOC) in Darmstadt, Germany.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>//localhost:1313/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/</guid>
+      <description>A non-exhaustive list of software projects I have worked on:&#xA;001 - Multi-level distributed cache&#xA;002 - Daytrip&#xA;003 - ProjectsChain&#xA;004 - Query Recommendation System&#xA;005 - Convex Hull Parellel Solver&#xA;006 - Digital Watermaking Tool&#xA;007 - Video Outpainting Localizer&#xA;008 - Dating App&#xA;009 - Galaxies Image Classifier&#xA;010 - Automatic expense tracker (work in progress)</description>
+    </item>
+    <item>
+      <title></title>
+      <link>//localhost:1313/projects/chps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/chps/</guid>
+      <description>Convex Hull Problem Solver 10/2022 - 12/2022&#xA;Project description Parallel implementation of the Divide and Conquer algorithm for the convex hull problem.&#xA;The implementation is based on the C programming language and leverages MPI and OpenMP libraries. The solution was tested on a High-Performance Computing cluster with specific PBS configuration files.&#xA;Repository and Report Team and role Team size: 2 people&#xA;The team designed the general implementation strategy together. I contributed in part of the core implementation and debugging of the algorithm.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>//localhost:1313/projects/datingapp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/datingapp/</guid>
+      <description>Dating App 10/2020 - 12/2020&#xA;Project description A web app that allows users to register, login, and find other users based on their interests and location. A simple chat system was implemented as well.&#xA;The goal of the project was to learn to design and develop RESTful APIs using Node.js and Express.js. The project was developed in a team of 5 people and Scrum was adopted as an agile workflow methodology.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>//localhost:1313/projects/daytrip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/daytrip/</guid>
+      <description>Daytrip 02/2023 - 04/2023&#xA;Project description The project aims to create a web application that suggests daytrip destinations in Italy based on weather conditions, travel time, and other indicators.&#xA;A service-oriented architecture was used to build decoupled services that can be expanded and modified independently.&#xA;Repository, Report and Demo Team and role Team size: 2 people&#xA;I was responsible for the design and implementation of many of the core services, spanning from data layer to business logic and process centric services.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>//localhost:1313/projects/dc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/dc/</guid>
+      <description>Multi-level Distributed Cache Project description This distributed cache system is designed to support multiple clients that read and write data items stored in a database. There are 2 levels of cache nodes, arranged in a tree structure.&#xA;The system is implemented leveraging the Akka framework: clients, caches, and the main database are all modeled as actors within the Akka actor system.&#xA;Clients interact with the system through the cache nodes, which are responsible for processing read and write requests.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>//localhost:1313/projects/dwt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/dwt/</guid>
+      <description>Digital Watermarking Tool 10/2022 - 11/2022&#xA;Project description A digital watermarking tool developed for the &amp;ldquo;Catch the Mark&amp;rdquo; competition of the Multimedia Data Security graduate course at the University of Trento.&#xA;The implementation is based on various research papers and leverages Discrete Wavelet Transform and Singular Value Decomposition.&#xA;The repository contains code for embedding, detecting, and attacking watermarked images.&#xA;Overall, the embedding strategy was evaluated as interesting and effective. Azure IaaS (VM with configured Python venv), Google Colab (Jupyter notebooks) and local machines were exploited for the parallelization of the attack phase.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>//localhost:1313/projects/gic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/gic/</guid>
+      <description>Galaxies Image Classifier 06/2021 - 07/2021&#xA;Project description The goal of this project is to classify galaxies images into 10 different classes. In order to achieve this goal, several models have been trained and tested, as explained in the report.&#xA;The final model is leveraging a pre-trained VGG19 network as a feature extractor and Support Vector Machines as a classifier.&#xA;The model has been trained on a dataset of 9928 images, validated on 2487 images and tested on 5321 images.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>//localhost:1313/projects/projectschain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/projectschain/</guid>
+      <description>ProjectsChain 05/2023 - 07/2023&#xA;Project description ProjectsChain is a plugin developed in order to be integrated with already existing e-shops of industrial designs and is able to grant, through blockchain and smart contracts, the intellectual property of the projects and a fair royalty distribution between coauthors of a final project.&#xA;The straightforward and transparent mechanism developed also will prevent non-payment and miscommunication risks, representing common scenarios among freelancers.&#xA;Repository, Report and Demo Team and role Team size: 3</description>
+    </item>
+    <item>
+      <title></title>
+      <link>//localhost:1313/projects/qrs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/projects/qrs/</guid>
+      <description>Query Recommendation System 11/2022 - 01/2023&#xA;Project description Hybrid recommendation system leveraging a linear combination of Expanded-Item-Item Collaborative Filtering and Compact Item-Item Collaborative Filtering based on query result cardinality.&#xA;Repository and Report Team and role Team size: 2 people&#xA;I was responsible for the implementation of the precursor of the generic Item-Item Collaborative Filtering algorithm and the Compact Item-Item Collaborative Filtering algorithm. I proposed and integrated the evaluation metrics used throughout the project.</description>
+    </item>
+  </channel>
+</rss>
