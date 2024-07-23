@@ -10,8 +10,8 @@ A service-oriented architecture was used to build decoupled services that can be
 
 ## Artifacts
 
-+ Repo: [GitHub](https://github.com/vicentinileonardo/daytrip)
-+ Repo: [Test](https://github.com/vicentinileonardo/daytrip)
+\- Repo: [GitHub](https://github.com/vicentinileonardo/daytrip)
+\- Repo: [Test](https://github.com/vicentinileonardo/daytrip)
 
 <center>
   <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap;">
