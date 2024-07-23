@@ -24,7 +24,7 @@ A non-exhaustive list of software projects I have worked on:
 
 010 - [**Automatic expense tracker**](/projects/aet) (work in progress)
 
-
+011 - [**Stripe CTF 2014 (Distributed Systems) - REBORN**](/projects/stripe-ctf) (work in progress)
 
 
 
