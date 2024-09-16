@@ -10,7 +10,7 @@ The main goal of the project was to modify the RAFT model and in particular we f
 
 Code not available due to non-disclosure agreement.
 
-## Report
+## Artifacts
 
 <center>
   <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap;">

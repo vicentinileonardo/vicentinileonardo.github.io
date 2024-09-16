@@ -8,7 +8,7 @@ Parallel implementation of the Divide and Conquer algorithm for the convex hull 
 
 The implementation is based on the C programming language and leverages **MPI** and **OpenMP** libraries. The solution was tested on a **High-Performance Computing cluster** with specific PBS configuration files.
 
-## Repository and Report
+## Artifacts
 
 <center>
   <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap;">

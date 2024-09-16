@@ -6,7 +6,7 @@
 
 **Hybrid recommendation system** leveraging a linear combination of Expanded-Item-Item Collaborative Filtering and Compact Item-Item Collaborative Filtering based on query result cardinality.
 
-## Repository and Report
+## Artifacts
 
 <center>
   <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap;">

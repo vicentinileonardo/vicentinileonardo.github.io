@@ -10,7 +10,7 @@ The final model is leveraging a pre-trained **VGG19** network as a feature extra
 
 The model has been trained on a dataset of 9928 images, validated on 2487 images and tested on 5321 images. It has achieved a sample-wise accuracy of 85.6% and a class-wise accuracy of 83.8% on the test set.
 
-## Repository and Report
+## Artifacts
 
 <center>
   <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap;">

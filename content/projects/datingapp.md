@@ -10,7 +10,7 @@ The goal of the project was to learn to design and develop **RESTful APIs** usin
 
 Pair programming was also adopted as a development technique.
 
-## Repository
+## Artifacts
 
 <center>
   <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap;">

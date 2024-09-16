@@ -13,7 +13,7 @@ The repository contains code for embedding, detecting, and attacking watermarked
 Overall, the embedding strategy was evaluated as interesting and effective. <br>
 **Azure IaaS** (VM with configured Python venv), Google Colab (Jupyter notebooks) and local machines were exploited for the parallelization of the attack phase.
 
-## Repository
+## Artifacts
 
 <center>
   <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap;">

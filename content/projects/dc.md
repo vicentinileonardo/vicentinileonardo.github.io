@@ -16,7 +16,7 @@ The goal of the system is to maintain **eventual consistency** between the datab
 
 A web server was created to interact with the system, firing: client operations, cache crashes and recoveries, system consistency check.
 
-## Repository, Report and Demo
+## Artifacts
 
 <center>
   <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap;">

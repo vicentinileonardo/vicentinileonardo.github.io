@@ -8,7 +8,7 @@ ProjectsChain is a plugin developed in order to be integrated with already exist
 
 The straightforward and transparent mechanism developed also will prevent non-payment and miscommunication risks, representing common scenarios among freelancers.
 
-## Repository, Report and Demo
+## Artifacts
 
 <center>
   <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap;">
