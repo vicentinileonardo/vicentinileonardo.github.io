@@ -22,11 +22,11 @@ A non-exhaustive list of software projects I have worked on:
 
 009 - [**Galaxies Image Classifier**](/projects/gic)
 
+010 - [**Stripe CTF 2014 (Distributed Systems) - REBORN**](/projects/stripe-ctf) (work in progress)
+
+<!--
 010 - [**Automatic expense tracker**](/projects/aet) (work in progress)
-
-011 - [**Stripe CTF 2014 (Distributed Systems) - REBORN**](/projects/stripe-ctf) (work in progress)
-
-
+-->
 
 
 
