@@ -1,7 +1,5 @@
 # Convex Hull Problem Solver
 
-10/2022 - 12/2022
-
 ## Project description
 
 Parallel implementation of the Divide and Conquer algorithm for the convex hull problem. 

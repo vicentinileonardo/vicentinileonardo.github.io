@@ -1,7 +1,5 @@
 # Dating App
 
-10/2020 - 12/2020
-
 ## Project description
 
 A web app that allows users to register, login, and find other users based on their interests and location. A simple **chat system** was implemented as well.

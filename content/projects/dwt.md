@@ -1,7 +1,5 @@
 # Digital Watermarking Tool
 
-10/2022 - 11/2022
-
 ## Project description
 
 A digital watermarking tool developed for the **"Catch the Mark" competition** of the Multimedia Data Security graduate course at the University of Trento.

@@ -60,7 +60,7 @@ disableHugoGeneratorInject = false
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Software Engineer | MSc in Computer Science @ UniTn | Ex-Intern @ ESA"
+  homeSubtitle = "Software Engineer - Cloud | MSc in Computer Science @ UniTn | Ex-Intern @ ESA"
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
@@ -116,7 +116,7 @@ disableHugoGeneratorInject = false
   # If you want, you can easily override the default footer with your own content. 
   #
   [params.footer]
-    trademark = 2024
+    trademark = 2025
     rss = false
     copyright = false
     author = false

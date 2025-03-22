@@ -1,7 +1,5 @@
 # Daytrip
 
-02/2023 - 04/2023
-
 ## Project description
 
 The project aims to create a web application that suggests daytrip destinations in Italy based on weather conditions, travel time, and other indicators. 

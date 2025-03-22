@@ -1,7 +1,5 @@
 # Query Recommendation System
 
-11/2022 - 01/2023
-
 ## Project description
 
 **Hybrid recommendation system** leveraging a linear combination of Expanded-Item-Item Collaborative Filtering and Compact Item-Item Collaborative Filtering based on query result cardinality.

@@ -1,7 +1,5 @@
 # Galaxies Image Classifier
 
-06/2021 - 07/2021
-
 ## Project description
 
 The goal of this project is to classify galaxies images into **10 different classes**. In order to achieve this goal, several models have been trained and tested, as explained in the report. 

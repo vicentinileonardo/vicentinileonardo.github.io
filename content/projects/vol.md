@@ -1,7 +1,5 @@
 # Video Outpainting Localizer
 
-04/2023 - 09/2023
-
 ## Project description
 
 Deep learning model for video outpainting localization. The model is able to localize the outpainted region in a video frame and to generate a binary mask that highlights the outpainted region. The implementation is based on the [RAFT model](https://arxiv.org/pdf/2003.12039.pdf). 
@@ -15,7 +13,7 @@ Code not available due to non-disclosure agreement.
 <center>
   <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap;">
     <a href="/projects/reports/video_outpainting_localizer.pdf" target="_blank" class="btn">
-    <img src="/img/icons8-pdf-100.png" alt="Video" width="70%" height=auto>
+    <img src="/img/icons8-pdf-100.png" alt="pdf" width="70%" height=auto>
     </a>
   </div>
 </center>

@@ -1,7 +1,5 @@
 # ProjectsChain
 
-05/2023 - 07/2023
-
 ## Project description
 
 ProjectsChain is a plugin developed in order to be integrated with already existing e-shops of industrial designs and is able to grant, through **blockchain** and **smart contracts**, the intellectual property of the projects and a fair royalty distribution between coauthors of a final project. 
