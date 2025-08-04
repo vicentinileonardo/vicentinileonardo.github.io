@@ -1,0 +1,81 @@
+{
+  "apiVersion": "v1",
+  "entries": {
+    "frontend-github-scaffolding": [
+      {
+        "annotations": {
+          "krateoSupportedVersion": ">= 2.5.0"
+        },
+        "apiVersion": "v2",
+        "created": "2025-07-31T14:10:03.541106599Z",
+        "description": "This is a template used to scaffold a toolchain to host and deploy a fully functional frontend App. This Template implements the following steps: - Create an empty Github repository (on github.com) - Push the code from the skeleton to the previously create repository - A Continuous Integration pipeline (GitHub workflow) will build the Dockerfile of the frontend app and the resulting image will be published as a Docker image on the GitHub Package registry - An ArgoCD Application will be deployed to listen to the Helm Chart of the frontend app and deploy the chart on the same Kubernetes cluster where ArgoCD is hosted - The frontend App will be deployed with a Service type of NodePort kind exposed on the chosen port. ",
+        "digest": "25dcf6da4d1c7b8db2af5cda05ffa5412986d3f6f8677477fba20a09f870a67f",
+        "home": "https://krateo.io",
+        "icon": "https://github.com/krateoplatformops/krateo/blob/main/docs/media/logo.svg",
+        "keywords": [
+          "operations"
+        ],
+        "name": "frontend-github-scaffolding",
+        "sources": [
+          "https://github.com/krateoplatformops-blueprints/frontend-github-scaffolding-blueprint"
+        ],
+        "type": "application",
+        "urls": [
+          "https://marketplace.krateo.io/frontend-github-scaffolding-0.0.1.tgz"
+        ],
+        "version": "0.0.1"
+      }
+    ],
+    "portal": [
+      {
+        "annotations": {
+          "krateoSupportedVersion": ">= 2.5.0"
+        },
+        "apiVersion": "v2",
+        "created": "2025-07-31T14:39:36.519524255Z",
+        "description": "A Blueprint for Krateo Composable Portal",
+        "digest": "7cf19f6e7b4122fa43c9090a5b313a238db5ce835f6c239d42d261d76d28bb22",
+        "home": "https://krateo.io",
+        "icon": "https://github.com/krateoplatformops/krateo/blob/main/docs/media/logo.svg",
+        "keywords": [
+          "portal"
+        ],
+        "name": "portal",
+        "sources": [
+          "https://github.com/krateoplatformops-blueprints/portal"
+        ],
+        "type": "application",
+        "urls": [
+          "https://marketplace.krateo.io/portal-0.0.1.tgz"
+        ],
+        "version": "0.0.1"
+      }
+    ],
+    "portal-blueprint-page": [
+      {
+        "annotations": {
+          "krateoSupportedVersion": ">= 2.5.0"
+        },
+        "apiVersion": "v2",
+        "created": "2025-07-31T15:08:53.013120317Z",
+        "description": "A Blueprint for Krateo Composable Portal Blueprint page",
+        "digest": "da7274359c3646a5734c8528cd699ae30ffc931a6fcd15ff6d56c8f2d1e14062",
+        "home": "https://krateo.io",
+        "icon": "https://github.com/krateoplatformops/krateo/blob/main/docs/media/logo.svg",
+        "keywords": [
+          "portal"
+        ],
+        "name": "portal-blueprint-page",
+        "sources": [
+          "https://github.com/krateoplatformops-blueprints/portal-blueprint-page"
+        ],
+        "type": "application",
+        "urls": [
+          "https://marketplace.krateo.io/portal-blueprint-page-0.0.1.tgz"
+        ],
+        "version": "0.0.1"
+      }
+    ]
+  },
+  "generated": "2025-07-31T15:08:53.012599285Z"
+}
