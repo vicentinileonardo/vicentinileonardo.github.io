@@ -4,7 +4,9 @@
 My interests include **cloud computing**, **distributed systems**, **AI systems** , **IT infrastructure**, and **software engineering** in general.
 
 <br>
+
 ---
+
 <br>
 
 I hold a **Bachelor's degree in Computer Science** from the **University of Trento**, Italy.
