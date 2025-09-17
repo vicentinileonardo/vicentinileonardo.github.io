@@ -15,11 +15,12 @@ Currently, I’m a Software Engineer at [**Krateo PlatformOps**](https://krateo.
 - designing AI agents architectures within Kubernetes environments
 - experimenting with distributed inference systems on Kubernetes.
 
+<br>
+
 I truly believe in continuous learning and self-improvement, and I’m always digging into new technologies and paradigms.
 The world of Computer Science is vast and ever-evolving, and among other things, I love the fact that there is not a single day where you don't learn something new or understand a concept better than before.
 
-<br>
-
-*Learning is the only thing the mind never exhausts, never fears, and never regrets.* ~ Leonardo da Vinci
+*Learning is the only thing the mind never exhausts, never fears, and never regrets.* 
+~ Leonardo da Vinci
 
 <br>
