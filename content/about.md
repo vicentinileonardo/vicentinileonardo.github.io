@@ -15,7 +15,11 @@ In 2024, I did an internship at the [**European Space Agency**](https://www.esa.
 
 In 2025, I graduated with a **Master's degree in Computer Science** from the **University of Trento**, Italy with a theses titled: **"A Policy-Driven Kubernetes-based Architecture for Resource Management in Multi-Cloud Environments"** developed in collaboration with [**Krateo PlatformOps**](https://krateo.io/).
 
+<br>
+
 ---
+
+<br>
 
 Currently, I’m a Software Engineer at [**Krateo PlatformOps**](https://krateo.io/), where I focus on:
 - developing a [generator for multi-controller Kubernetes Operators](https://github.com/krateoplatformops/oasgen-provider).
@@ -23,10 +27,16 @@ Currently, I’m a Software Engineer at [**Krateo PlatformOps**](https://krateo.
 - designing AI agents architectures within Kubernetes environments.
 - experimenting with distributed inference systems on Kubernetes.
 
+<br>
+
 ---
+
+<br>
 
 I truly believe in continuous learning and self-improvement, and I’m always digging into new technologies and paradigms.
 The world of Computer Science is vast and ever-evolving, and among other things, I love the fact that there is not a single day where you don't learn something new or understand a concept better than before.
+
+<br>
 
 *Learning is the only thing the mind never exhausts, never fears, and never regrets.* 
 ~ Leonardo da Vinci
