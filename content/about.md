@@ -27,4 +27,3 @@ The world of Computer Science is vast and ever-evolving, and among other things,
 *Learning is the only thing the mind never exhausts, never fears, and never regrets.* 
 ~ Leonardo da Vinci
 
-<br>
