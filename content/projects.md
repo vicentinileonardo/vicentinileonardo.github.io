@@ -1,7 +1,17 @@
 
 
+A selected list of software projects I have worked on:
 
-A non-exhaustive list of software projects I have worked on:
+
+001 - [**OASGen Provider**](https://github.com/krateoplatformops/oasgen-provider)
+
+002 - [**Rest Dynamic Controller**](https://github.com/krateoplatformops/rest-dynamic-controller)
+
+003 - [**`resources-presenter`**](https://github.com/krateoplatformops/resources-presenter)
+
+<br>
+
+A non-exhaustive list of non-professional software projects I have worked on:
 
 
 001 - [**Multi-level distributed cache**](/projects/dc)
@@ -12,9 +22,9 @@ A non-exhaustive list of software projects I have worked on:
 
 004 - [**Query Recommendation System**](/projects/qrs)
 
-005 - [**Convex Hull Parellel Solver**](/projects/chps)
+005 - [**Convex Hull Parallel Solver**](/projects/chps)
 
-006 - [**Digital Watermaking Tool**](/projects/dwt)
+006 - [**Digital Watermarking Tool**](/projects/dwt)
 
 007 - [**Video Outpainting Localizer**](/projects/vol)
 
@@ -27,8 +37,5 @@ A non-exhaustive list of software projects I have worked on:
 
 010 - [**Automatic expense tracker**](/projects/aet) (work in progress)
 -->
-
-
-
 
 <br>
