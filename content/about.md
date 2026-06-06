@@ -3,7 +3,7 @@ title: "About"
 description: "Leonardo Vicentini — Software Engineer (Cloud/Kubernetes) at Krateo PlatformOps, BSc & MSc in Computer Science from the University of Trento, ex-intern at ESA/ESOC."
 ---
 
-My interests include **cloud computing**, **distributed systems**, **AI systems** , **IT infrastructure**, and **software engineering** in general.
+My interests include **cloud computing**, **distributed systems**, **AI systems**, **platform engineering**, and **software engineering** in general.
 
 <br>
 
@@ -41,6 +41,10 @@ Currently, I am a **Software Engineer** at [Krateo PlatformOps](https://krateo.i
 
 I truly believe in **continuous learning** and **self-improvement**, and I’m always digging into new technologies and paradigms.
 The world of Computer Science is vast and ever-evolving, and among other things, I love the fact that there is not a single day where you don't learn something new or understand a concept better than before.
+
+<br>
+
+**Currently exploring** *(June 2026)*: [agentgateway](https://agentgateway.dev/) — a data plane that provides connectivity for agents, MCP tools, LLMs, and inferences. My hands-on experiments live in [agentgateway-playground](https://github.com/vicentinileonardo/agentgateway-playground).
 
 <br>
 
