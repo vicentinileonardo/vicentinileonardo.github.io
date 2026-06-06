@@ -25,7 +25,6 @@ Currently, I’m a Software Engineer at [**Krateo PlatformOps**](https://krateo.
 - developing a [generator for multi-controller Kubernetes Operators](https://github.com/krateoplatformops/oasgen-provider).
 - integrating diverse services into cloud-native environments.
 - designing AI agents architectures within Kubernetes environments.
-- experimenting with distributed inference systems on Kubernetes.
 
 <br>
 
@@ -38,6 +37,6 @@ The world of Computer Science is vast and ever-evolving, and among other things,
 
 <br>
 
-*Learning is the only thing the mind never exhausts, never fears, and never regrets.* 
-~ Leonardo da Vinci
+*Learning is the only thing the mind never exhausts, never fears, and never regrets.*
+~Leonardo da Vinci
 
