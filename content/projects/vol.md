@@ -1,4 +1,7 @@
-# Video Outpainting Localizer
+---
+title: "Video Outpainting Localizer"
+description: "A deep learning model (based on RAFT) that localizes outpainted regions in video frames and generates a binary mask highlighting them."
+---
 
 ## Project description
 
@@ -13,7 +16,7 @@ Code not available due to non-disclosure agreement.
 <center>
   <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap;">
     <a href="/projects/reports/video_outpainting_localizer.pdf" target="_blank" class="btn">
-    <img src="/img/icons8-pdf-100.png" alt="pdf" width="70%" height=auto>
+    <img src="/img/icons8-pdf-100.png" alt="PDF report" width="70%" height=auto>
     </a>
   </div>
 </center>

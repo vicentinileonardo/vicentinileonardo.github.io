@@ -1,4 +1,7 @@
-# ProjectsChain
+---
+title: "ProjectsChain"
+description: "A blockchain plugin for design e-shops that grants intellectual property and fair royalty distribution among coauthors via smart contracts."
+---
 
 ## Project description
 
@@ -15,10 +18,10 @@ The straightforward and transparent mechanism developed also will prevent non-pa
   <img src="/img/icons8-github-90.png" alt="GitHub" width="80%" height=auto>
   </a>
   <a href="/projects/reports/projectschain.pdf" target="_blank" class="btn">
-  <img src="/img/icons8-pdf-100.png" alt="Video" width="70%" height=auto>
+  <img src="/img/icons8-pdf-100.png" alt="PDF report" width="70%" height=auto>
   </a>
   <a href="https://drive.google.com/file/d/1NBfR3Tln6dz7mGiXHSfOW1VU1A21XQo1/view?usp=sharing" target="_blank" class="btn">
-  <img src="/img/icons8-video-file-90.png" alt="Video" width="80%" height=auto>
+  <img src="/img/icons8-video-file-90.png" alt="Demo video" width="80%" height=auto>
   </a>
   </div>
 

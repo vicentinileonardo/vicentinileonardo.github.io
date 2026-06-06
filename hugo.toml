@@ -1,4 +1,4 @@
-baseURL = "localhost"
+baseURL = "https://vicentinileonardo.github.io/"
 title   = "Leonardo Vicentini"
 languageCode = "en-us"
 theme = "hello-friend-ng"
@@ -54,8 +54,8 @@ disableHugoGeneratorInject = false
 
   # Metadata mostly used in document's head
   # 
-  description = "Nice theme for homepages and blogs"
-  keywords = ""
+  description = "Leonardo Vicentini — Software Engineer specializing in cloud computing, Kubernetes, and distributed systems. BSc & MSc in Computer Science (UniTn), ex-intern at ESA/ESOC."
+  keywords = "Leonardo Vicentini, software engineer, cloud computing, Kubernetes, distributed systems, platform engineering, Krateo, ESA"
   images = [""]
 
   # Home subtitle of the index page.
@@ -241,12 +241,6 @@ disableHugoGeneratorInject = false
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   #[languages.en.params]
     #subtitle  = ""
-
-  [languages.fr]
-    weight    = 2
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  [languages.fr.params]
-    subtitle  = "Hello Friend NG Theme"
 
 [menu]
   [[menu.main]]

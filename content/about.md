@@ -1,5 +1,7 @@
-
-
+---
+title: "About"
+description: "Leonardo Vicentini — Software Engineer (Cloud/Kubernetes) at Krateo PlatformOps, BSc & MSc in Computer Science from the University of Trento, ex-intern at ESA/ESOC."
+---
 
 My interests include **cloud computing**, **distributed systems**, **AI systems** , **IT infrastructure**, and **software engineering** in general.
 

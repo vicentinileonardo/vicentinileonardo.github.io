@@ -1,4 +1,7 @@
-# Digital Watermarking Tool
+---
+title: "Digital Watermarking Tool"
+description: "A digital watermarking tool (DWT + SVD) built for the \"Catch the Mark\" competition of the Multimedia Data Security course at the University of Trento."
+---
 
 ## Project description
 
@@ -19,7 +22,7 @@ Overall, the embedding strategy was evaluated as interesting and effective. <br>
   <img src="/img/icons8-github-90.png" alt="GitHub" width="80%" height=auto>
   </a>
   <a href="/projects/reports/digital_watermarking_tool.pdf" target="_blank" class="btn">
-  <img src="/img/icons8-pdf-100.png" alt="Video" width="70%" height=auto>
+  <img src="/img/icons8-pdf-100.png" alt="PDF report" width="70%" height=auto>
   </a>
   </div>
 </center>

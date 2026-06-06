@@ -1,2 +1,9 @@
 .claude
 CLAUDE.md
+
+# Hugo build output (rebuilt by CI on deploy)
+public/
+resources/_gen/
+
+# macOS
+.DS_Store

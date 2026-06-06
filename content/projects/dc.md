@@ -1,4 +1,7 @@
-# Multi-level Distributed Cache
+---
+title: "Multi-level Distributed Cache"
+description: "An Akka-based two-level distributed cache supporting reads/writes with crash detection and recovery, targeting eventual consistency."
+---
 
 ## Project description
 
@@ -24,7 +27,7 @@ A web server was created to interact with the system, firing: client operations,
   <img src="/img/icons8-github-90.png" alt="GitHub" width="80%" height=auto>
   </a>
   <a href="/projects/reports/distributed_cache.pdf" target="_blank" class="btn">
-  <img src="/img/icons8-pdf-100.png" alt="Video" width="70%" height=auto>
+  <img src="/img/icons8-pdf-100.png" alt="PDF report" width="70%" height=auto>
   </a>
   </div>
 </center>

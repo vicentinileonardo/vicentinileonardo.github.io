@@ -1,4 +1,7 @@
-# Dating App
+---
+title: "Dating App"
+description: "A web app where users register, log in, and find others by interests and location, with a simple chat system; built with Node.js and Express."
+---
 
 ## Project description
 

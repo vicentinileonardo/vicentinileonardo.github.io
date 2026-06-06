@@ -1,4 +1,7 @@
-# Daytrip
+---
+title: "Daytrip"
+description: "A service-oriented web application that suggests daytrip destinations in Italy based on weather, travel time, and other indicators."
+---
 
 ## Project description
 
@@ -8,11 +11,19 @@ A service-oriented architecture was used to build decoupled services that can be
 
 ## Artifacts
 
-\- Repo: [GitHub](https://github.com/vicentinileonardo/daytrip)
-
-\- Report: [PDF](/projects/reports/daytrip.pdf)
-
-\- Demo: [Video](https://drive.google.com/file/d/1k0KBPMmt-DaVHthZ1S2wKzhBID33X0ad/view?usp=sharing)
+<center>
+  <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap;">
+  <a href="https://github.com/vicentinileonardo/daytrip" target="_blank" class="btn">
+  <img src="/img/icons8-github-90.png" alt="GitHub" width="80%" height=auto>
+  </a>
+  <a href="/projects/reports/daytrip.pdf" target="_blank" class="btn">
+  <img src="/img/icons8-pdf-100.png" alt="PDF report" width="70%" height=auto>
+  </a>
+  <a href="https://drive.google.com/file/d/1k0KBPMmt-DaVHthZ1S2wKzhBID33X0ad/view?usp=sharing" target="_blank" class="btn">
+  <img src="/img/icons8-video-file-90.png" alt="Demo video" width="80%" height=auto>
+  </a>
+  </div>
+</center>
 
 
 ## Team and role

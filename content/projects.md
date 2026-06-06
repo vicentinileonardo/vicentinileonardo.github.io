@@ -1,4 +1,7 @@
-
+---
+title: "Projects"
+description: "A selection of professional and academic software projects by Leonardo Vicentini, spanning cloud-native platforms, distributed systems, and machine learning."
+---
 
 A selected list of software projects I have worked on:
 
@@ -35,7 +38,7 @@ A non-exhaustive list of non-professional software projects I have worked on:
 <!--
 010 - [**Stripe CTF 2014 (Distributed Systems) - REBORN**](/projects/stripe-ctf) (work in progress)
 
-010 - [**Automatic expense tracker**](/projects/aet) (work in progress)
+011 - [**Automatic expense tracker**](/projects/aet) (work in progress)
 -->
 
 <br>

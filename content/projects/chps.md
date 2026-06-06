@@ -1,4 +1,7 @@
-# Convex Hull Problem Solver
+---
+title: "Convex Hull Problem Solver"
+description: "Parallel implementation of the Divide and Conquer algorithm for the convex hull problem, using MPI and OpenMP on an HPC cluster."
+---
 
 ## Project description
 
@@ -14,7 +17,7 @@ The implementation is based on the C programming language and leverages **MPI** 
     <img src="/img/icons8-github-90.png" alt="GitHub" width="80%" height=auto>
     </a>
     <a href="/projects/reports/parallel_convex_hull_solver.pdf" target="_blank" class="btn">
-    <img src="/img/icons8-pdf-100.png" alt="Video" width="70%" height=auto>
+    <img src="/img/icons8-pdf-100.png" alt="PDF report" width="70%" height=auto>
     </a>
   </div>
 </center>

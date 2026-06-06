@@ -1,4 +1,7 @@
-# Galaxies Image Classifier
+---
+title: "Galaxies Image Classifier"
+description: "Image classification of galaxies into 10 classes using a VGG19 feature extractor with an SVM classifier, reaching ~85% test accuracy."
+---
 
 ## Project description
 
@@ -18,7 +21,7 @@ The model has been trained on a dataset of 9928 images, validated on 2487 images
   </a>
 
   <a href="/projects/reports/galaxies_image_classifier.pdf" target="_blank" class="btn">
-  <img src="/img/icons8-pdf-100.png" alt="Video" width="70%" height=auto>
+  <img src="/img/icons8-pdf-100.png" alt="PDF report" width="70%" height=auto>
   </a>
 
   </div>
