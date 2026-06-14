@@ -45,7 +45,7 @@ The world of Computer Science is vast and ever-evolving, and among other things,
 <br>
 
 **Currently exploring** *(June 2026)*: 
-- [agentgateway](https://agentgateway.dev/) — a data plane that provides connectivity for agents, MCP tools, LLMs, and inferences. My hands-on experiments / walkthrough live in [agentgateway-playground](https://github.com/vicentinileonardo/agentgateway-playground).
+- [agentgateway](https://agentgateway.dev/) - a data plane that provides connectivity for agents, MCP tools, LLMs, and inferences. My hands-on experiments / walkthrough live in [agentgateway-playground](https://github.com/vicentinileonardo/agentgateway-playground).
 - [OpenSpec](https://github.com/Fission-AI/OpenSpec/) - a lightweight, open-source spec-driven development (SDD) framework for AI coding assistants.
 
 <br>
