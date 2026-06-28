@@ -12,6 +12,10 @@ A selected list of software projects I have worked on:
 
 003 - [**`resources-presenter`**](https://github.com/krateoplatformops/resources-presenter)
 
+004 - [**Azure DevOps Provider for Krateo Operator Generator**](https://github.com/krateoplatformops-blueprints/azuredevops-provider-kog)
+
+005 - [**GitHub Provider for Krateo Operator Generator**](https://github.com/krateoplatformops-blueprints/github-provider-kog)
+
 <br>
 
 A non-exhaustive list of non-professional software projects I have worked on:
