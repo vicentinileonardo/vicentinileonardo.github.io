@@ -254,7 +254,7 @@ disableHugoGeneratorInject = false
   [[menu.main]]
     identifier = "cv"
     name       = "CV"
-    url        = "CV_Leonardo_Vicentini_MSc_Software_Engineer.pdf"
+    url        = "cv_leonardo_vicentini.pdf"
 
   [[menu.main]]
     identifier = "projects"
