@@ -44,11 +44,5 @@ The world of Computer Science is vast and ever-evolving, and among other things,
 
 <br>
 
-**Currently exploring** *(July 2026)*: 
-- [agentgateway](https://agentgateway.dev/) - a data plane that provides connectivity for agents, MCP tools, LLMs, and inferences.
-- [Agent Substrate](https://learn.agentsubstrate.dev/) - Kubernetes-native runtime for highly-multiplexed actor workloads
-
-<br>
-
 *Learning is the only thing the mind never exhausts, never fears, and never regrets.*
 ~Leonardo da Vinci
