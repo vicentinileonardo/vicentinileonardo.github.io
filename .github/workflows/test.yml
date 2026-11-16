@@ -1,0 +1,73 @@
+# Browser tests for the PS2 menu and the plain site (tests/browser_test.py).
+# Runs on every pull request, so a broken menu is caught before it can be merged and deployed.
+# It is deliberately separate from the deploy workflow: a test run can never block or break a deploy.
+name: Browser tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  browser-tests:
+    # pinned image and tool versions: an upstream change cannot silently alter the run
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      HUGO_VERSION: 0.127.0          # same as the deploy workflow
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.ms-playwright
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Hugo CLI
+        run: |
+          wget -q -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'   # same as local runs
+          cache: pip
+          cache-dependency-path: tests/requirements.txt
+
+      - name: Install Playwright
+        run: pip install -r tests/requirements.txt
+
+      - name: Cache browsers
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.PLAYWRIGHT_BROWSERS_PATH }}
+          key: playwright-${{ runner.os }}-${{ hashFiles('tests/requirements.txt') }}
+
+      - name: Install browsers and system dependencies
+        run: python -m playwright install --with-deps chromium firefox webkit
+
+      - name: Build the site
+        run: hugo --minify --baseURL http://127.0.0.1:8080/ -d ${{ runner.temp }}/site
+
+      - name: Serve the site
+        run: |
+          python tests/serve_static.py ${{ runner.temp }}/site 8080 &
+          for i in $(seq 1 30); do curl -sf -o /dev/null http://127.0.0.1:8080/ && exit 0; sleep 1; done
+          echo "static server did not start"; exit 1
+
+      - name: Run browser tests
+        run: python tests/browser_test.py --base http://127.0.0.1:8080 --out tests/output
+
+      - name: Upload screenshots and results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-test-output
+          path: tests/output
+          retention-days: 14

@@ -1,0 +1,5 @@
+# Pinned: 1.49.x is the newest Playwright that still supports macOS 13 locally; CI uses the same version.
+playwright==1.49.1
+# Only for tests/visual_compare.py
+numpy==2.5.5
+pillow==13.0.0
