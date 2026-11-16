@@ -1,0 +1,16 @@
+{{- /* Data for the PS2 menu: every save, grouped by memory card, built from the Markdown front matter and body. */ -}}
+{{- $items := slice -}}
+{{- range where site.RegularPages "Params.ps2" "!=" nil -}}
+  {{- $p := .Params.ps2 -}}
+  {{- $items = $items | append (dict
+      "id" $p.model "card" $p.card "order" $p.order "hue" $p.hue
+      "save" $p.save "short" $p.short "subtitle" $p.subtitle "summary" $p.summary
+      "tags" ($p.tags | default slice) "meta" $p.meta
+      "title" .Title "lead" .Description "url" .RelPermalink
+      "stack" (.Params.stack | default slice) "links" (.Params.links | default slice)
+      "html" .Content) -}}
+{{- end -}}
+{{- dict "cards" (dict
+    "career" (sort (where $items "card" "career") "order")
+    "pro" (sort (where $items "card" "pro") "order")
+    "uni" (sort (where $items "card" "uni") "order")) | jsonify -}}

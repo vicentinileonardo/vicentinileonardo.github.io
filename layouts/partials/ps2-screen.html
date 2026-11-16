@@ -1,0 +1,77 @@
+{{- /* The PS2 menu. Hidden unless the head script switched the page into PS2 mode (html.ps2). */ -}}
+<div id="ps2app" aria-label="Interactive PS2-style portfolio">
+<div class="screen" id="screen" tabindex="0" aria-label="Console screen. Arrow keys move, Enter selects, Escape goes back.">
+        <div class="stage retro subs" id="stage">
+          <canvas id="bg" aria-hidden="true"></canvas>
+
+          <div class="layer" id="Lboot"><div class="boot-txt t">LEONARDO VICENTINI<small>SOFTWARE ENGINEER – PLATFORM &amp; INFRASTRUCTURE</small></div></div>
+
+          <div class="layer" id="Lmenu">
+            <button class="btn mi t on" id="mi0" type="button" tabindex="-1" aria-label="Browser — Experience, Projects &amp; CV">Browser<small class="sub">Experience, Projects &amp; CV</small></button>
+            <button class="btn mi t" id="mi1" type="button" tabindex="-1" aria-label="System Configuration — Profile, Skills &amp; Availability">System Configuration<small class="sub">Profile, Skills &amp; Availability</small></button>
+          </div>
+
+          <div class="layer" id="Lroot">
+            <button class="btn dev" type="button" tabindex="-1" style="left:116px" data-i="0"><span class="obj card3d" aria-hidden="true"></span><span class="cap t">6 saves</span></button>
+            <button class="btn dev" type="button" tabindex="-1" style="left:252px" data-i="1"><span class="obj card3d" aria-hidden="true"></span><span class="cap t">6 saves</span></button>
+            <button class="btn dev" type="button" tabindex="-1" style="left:388px" data-i="2"><span class="obj card3d" aria-hidden="true"></span><span class="cap t">9 saves</span></button>
+            <button class="btn dev" type="button" tabindex="-1" style="left:524px" data-i="3"><span class="obj disc"></span><span class="cap t">Curriculum Vitae · PDF</span></button>
+            <a id="cvLink" href="/cv_leonardo_vicentini.pdf" target="_blank" rel="noopener" tabindex="-1" hidden>CV</a>
+          </div>
+
+          <div class="layer" id="Lcard"><div class="grid" id="grid" role="listbox" aria-label="Saves"></div></div>
+
+          <div class="layer" id="Lsave">
+            <div class="big" aria-hidden="true" id="bigWrap"><span class="cube" id="bigCube"></span><canvas class="mdl" id="bigMdl" width="340" height="320" hidden></canvas></div>
+            <div class="opts" id="opts"></div>
+            <div class="desc t" id="sdesc"></div>
+          </div>
+
+          <div class="layer" id="Lconf">
+            <div id="gcubes"></div>
+            <div class="ctitle t">System Configuration</div>
+            <div class="centry t" id="centry"></div>
+            <svg class="arrows" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 3 21 13H3z M12 29 3 19h18z" fill="#c0c0c0" stroke="#000" stroke-width="1"/></svg>
+            <div class="cval t" id="cval"></div>
+            <div class="chelp t" id="chelp" aria-live="polite"></div>
+          </div>
+
+          <div class="layer" id="Lver">
+            <div class="vtitle t">Profile Summary</div>
+            <dl class="qv t" id="qv"></dl>
+          </div>
+
+          <div class="contact" id="contact" hidden role="dialog" aria-label="Contact">
+            <div class="cpanel">
+              <div class="ctop t">Contact</div>
+              <div class="cname t">Leonardo Vicentini<small>Software Engineer – Platform &amp; Infrastructure</small><em class="open">Open to new roles</em><small>EU citizen · open to relocation (EU, UK, CH)</small></div>
+              <div class="clist" id="clist">
+                <a class="copt t" href="/cv_leonardo_vicentini.pdf" target="_blank" rel="noopener" tabindex="-1">Curriculum Vitae (PDF)</a>
+                <a class="copt t" href="https://www.linkedin.com/in/leonardovicentini" target="_blank" rel="noopener" tabindex="-1">LinkedIn</a>
+                <a class="copt t" href="https://github.com/vicentinileonardo" target="_blank" rel="noopener" tabindex="-1">GitHub</a>
+                <a class="copt t" href="mailto:vicentini.leonardo99@gmail.com" tabindex="-1">Send e-mail</a>
+                <button class="btn copt t" type="button" tabindex="-1" id="cmail">Copy address <span id="mailTxt">vicentini.leonardo99@gmail.com</span></button>
+              </div>
+              <div class="cstat t" id="cstat" aria-live="polite"></div>
+            </div>
+          </div>
+          <div class="dov" id="dov" hidden role="dialog" aria-labelledby="dtitle">
+            <div class="dpanel">
+              <div class="dtitle t" id="dtitle"></div>
+              <div class="dview">
+                <div class="dbody t" id="dbody" tabindex="-1"></div>
+                <div class="dpage t" id="dpage" hidden><span id="dpn">1 / 1</span><svg viewBox="0 0 24 32" aria-hidden="true"><path d="M12 3 21 13H3z M12 29 3 19h18z" fill="#c0c0c0" stroke="#000" stroke-width="1"/></svg></div>
+              </div>
+              <div class="dmenu" id="dmenu"></div>
+            </div>
+          </div>
+          <div class="band top"><span id="tl" class="t"></span><span id="tr" class="t"></span></div>
+          <div class="band bot"></div>
+          <div id="hints"></div>
+          <div class="haze" aria-hidden="true"></div>
+          <canvas id="grain" width="320" height="224" aria-hidden="true"></canvas>
+          <div class="fader" id="fader"></div>
+        </div>
+      </div>
+<a class="classic-link" href="?classic=1">Classic view</a>
+</div>

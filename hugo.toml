@@ -34,6 +34,20 @@ disableSitemap = false
 disable404     = false
 disableHugoGeneratorInject = false
 
+[outputFormats]
+  # data for the PS2 menu, served at /ps2.json (kept apart from the theme's JSON-feed link)
+  [outputFormats.PS2]
+    mediaType = "application/json"
+    baseName = "ps2"
+    isPlainText = true
+    notAlternative = true
+
+[outputs]
+  home = ["HTML", "RSS", "PS2"]
+
+[author]
+  name = "Leonardo Vicentini"
+
 [permalinks]
   posts = "/posts/:year/:month/:title/"
 
@@ -56,7 +70,9 @@ disableHugoGeneratorInject = false
   # 
   description = "Leonardo Vicentini — Software Engineer specializing in cloud computing, Kubernetes, and distributed systems. BSc & MSc in Computer Science (UniTn), ex-intern at ESA/ESOC."
   keywords = "Leonardo Vicentini, software engineer, cloud computing, Kubernetes, distributed systems, platform engineering, Krateo, ESA"
-  images = [""]
+  # default social preview image for every page
+  images = ["img/og-card.png"]
+  themeColor = "#000000"
 
   # Home subtitle of the index page.
   #
@@ -247,6 +263,10 @@ disableHugoGeneratorInject = false
   #  identifier = "posts"
   #  name       = "Posts"
   #  url        = "posts/"
+  [[menu.main]]
+    identifier = "career"
+    name       = "Experience"
+    url        = "career/"
   [[menu.main]]
     identifier = "cv"
     name       = "CV"

@@ -1,0 +1,14 @@
+{{ define "main" }}
+<main class="post">
+  <article>
+    <h2 class="post-title">{{ .Title }}</h2>
+    <div class="post-content">
+      <ul>
+      {{- range .Pages.ByWeight }}
+        <li><a href="{{ .RelPermalink }}"><strong>{{ .Title }}</strong></a> · {{ .Params.ps2.meta }}<br>{{ .Description }}</li>
+      {{- end }}
+      </ul>
+    </div>
+  </article>
+</main>
+{{ end }}

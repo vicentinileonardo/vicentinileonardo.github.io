@@ -13,9 +13,9 @@ My interests include **cloud computing**, **distributed systems**, **AI systems*
 
 I hold a **Bachelor's degree in Computer Science** from the **University of Trento**, Italy.
 
-In 2024, I did an internship at the [**European Space Agency**](https://www.esa.int/), as a **Software Engineer (Cloud & Infrastructure)**. In particular, I worked in the Mission Operations Infrastructure IT section at the [**European Space Operations Centre (ESOC)**](https://www.esa.int/About_Us/ESOC) in Darmstadt, Germany.
+In 2024, I did an internship at the **European Space Agency**, as a **Software Engineer (Cloud & Infrastructure)**. In particular, I worked in the Mission Operations Infrastructure IT section at the **European Space Operations Centre (ESOC)** in Darmstadt, Germany.
 
-In 2025, I graduated with a **Master's degree in Computer Science** from the **University of Trento**, Italy with a thesis titled: **"A Policy-Driven Kubernetes-based Architecture for Resource Management in Multi-Cloud Environments"** developed in collaboration with [**Krateo PlatformOps**](https://krateo.io/).
+In 2025, I graduated with a **Master's degree in Computer Science** from the **University of Trento**, Italy with a thesis titled: **"A Policy-Driven Kubernetes-based Architecture for Resource Management in Multi-Cloud Environments"** developed in collaboration with **Krateo PlatformOps**.
 
 <br>
 
@@ -23,15 +23,15 @@ In 2025, I graduated with a **Master's degree in Computer Science** from the **U
 
 <br>
 
-From 2025 to 2026, I was a **Software Engineer** at [Krateo PlatformOps](https://krateo.io/), where I:
-- **designed and developed core platform components**, including:
+From 2025 to 2026, I was a **Software Engineer** at Krateo PlatformOps, where I:
+- **built and evolved core platform components**, including:
   - a [generator for multi-controller Kubernetes Operators](https://github.com/krateoplatformops/oasgen-provider)
   - a [dynamic Kubernetes controller](https://github.com/krateoplatformops/rest-dynamic-controller)
   - a [read-only HTTP API for querying current Kubernetes resources](https://github.com/krateoplatformops/resources-presenter)
 - integrated external services and systems into **cloud-native environments**
 - provided rotational **L1–L3 support for enterprise platform deployments**
 - planned and executed **platform migration initiatives** for enterprise customers
-- designed and implemented **AI agents architectures** running on Kubernetes
+- evaluated agent frameworks (kagent, Google ADK), memory systems, and **MCP/A2A protocols** for Krateo's multi-agent Autopilot
 
 I am currently **open to new roles** as a Software Engineer in platform & infrastructure. EU citizen, open to relocation across the EU, UK & CH.
 

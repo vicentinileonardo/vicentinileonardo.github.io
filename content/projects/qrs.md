@@ -1,43 +1,31 @@
 ---
 title: "Query Recommendation System"
 description: "A hybrid recommendation system combining Expanded and Compact Item-Item Collaborative Filtering based on query result cardinality."
+weight: 204
+ps2:
+  card: "uni"
+  order: 4
+  model: "QR"
+  hue: 320
+  save: "Query Recommendation System"
+  short: "Query Recommendation"
+  subtitle: "MSc · Data Mining"
+  summary: "Expanded + Compact Item-Item Collaborative Filtering, weighted by query result cardinality."
+  tags: ["Python", "NumPy", "Pandas"]
+  meta: "MSc course: Data Mining"
+stack: ["Python", "NumPy", "Pandas"]
+links:
+  - {label: "Open Repository", url: "https://github.com/vicentinileonardo/query-recommendation-system"}
+  - {label: "Read Report", url: "/projects/reports/query_recommendation_system.pdf"}
 ---
+## Overview
 
-## Project description
+- **Hybrid recommendation system** leveraging a linear combination of Expanded-Item-Item Collaborative Filtering and Compact Item-Item Collaborative Filtering based on query result cardinality.
 
-**Hybrid recommendation system** leveraging a linear combination of Expanded-Item-Item Collaborative Filtering and Compact Item-Item Collaborative Filtering based on query result cardinality.
+## My role
 
-## Artifacts
-
-<center>
-  <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap;">
-  <a href="https://github.com/vicentinileonardo/query-recommendation-system" target="_blank" class="btn">
-  <img src="/img/icons8-github-90.png" alt="GitHub" width="80%" height=auto>
-  </a>
-  <a href="/projects/reports/query_recommendation_system.pdf" target="_blank" class="btn">
-  <img src="/img/icons8-pdf-100.png" alt="PDF report" width="70%" height=auto>
-  </a>
-  </div>
-</center>
-
-## Team and role
-
-Team size: 2 people
-
-+ I was responsible for the implementation of the precursor of the generic Item-Item Collaborative Filtering algorithm and the **Compact Item-Item Collaborative Filtering** algorithm. <br>
-+ I proposed and integrated the **evaluation metrics** used throughout the project. <br>
-+ I implemented several other components, following other approaches, such as a **Content-based** algorithm, which did not satisfied our baseline requirements. <br>
-+ I proposed and implemented the **linear combination** based on query result cardinality of the two best algorithms. <br>
-+ Given my previous experience with **data visualization**, I created the visualizations of the results for the report, along with the contribution to the redaction of the report itself.
-
-## Tech stack
-
-<center>
-  <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap;">
-  <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="Python" style="margin: 5px;">
-  <img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" style="margin: 5px;">
-  <img src="https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" style="margin: 5px;">
-  </div>
-</center>
-
-<br>
+- I was responsible for the implementation of the precursor of the generic Item-Item Collaborative Filtering algorithm and the **Compact Item-Item Collaborative Filtering** algorithm.
+- I proposed and integrated the **evaluation metrics** used throughout the project.
+- I implemented several other components, following other approaches, such as a **Content-based** algorithm, which did not satisfy our baseline requirements.
+- I proposed and implemented the **linear combination** based on query result cardinality of the two best algorithms.
+- Given my previous experience with **data visualization**, I created the visualizations of the results for the report, along with the contribution to the redaction of the report itself.
