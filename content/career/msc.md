@@ -14,8 +14,7 @@ ps2:
   tags: []
   meta: "Sep 2021 – Mar 2025 · Trento, Italy"
 stack: []
-links:
-  - {label: "Visit UniTn", url: "https://www.unitn.it/en"}
+links: []
 ---
 ## Result
 
