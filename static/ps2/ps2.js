@@ -519,7 +519,7 @@ CONF.forEach((c,i) => {
     <dt>Role</dt><dd>Software Engineer – Platform &amp; Infrastructure</dd>
     <dt>Status</dt><dd><span class="open">Open to new roles</span> · relocation EU, UK, CH</dd>
     <dt>Experience</dt><dd>Krateo · Software Engineer, 2025–2026<br>ESA / ESOC · Cloud &amp; Infrastructure intern, 2024</dd>
-    <dt>Education</dt><dd>MSc &amp; BSc Computer Science, UniTn · MSc 110/110 cum laude</dd>
+    <dt>Education</dt><dd>MSc &amp; BSc Computer Science, UniTn · MSc 110/110 with honors</dd>
     <dt>Stack</dt><dd>Go, Python · Kubernetes, Helm · AWS, GCP, Azure · Prometheus</dd>
     <dt>Selected work</dt><dd><ul>${work}</ul></dd>`;
 }

@@ -21,7 +21,7 @@ links:
 
 - A **read-only HTTP API** for querying current Kubernetes resources.
 - **Postgres**-backed Go query API with **RBAC-aware filtering** and **keyset pagination**.
-- One of the core platform components I evolved at Krateo PlatformOps.
+- One of the core platform components I built at Krateo PlatformOps.
 
 ## What I did
 

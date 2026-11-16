@@ -1,5 +1,5 @@
 ---
-title: "Convex Hull Problem Solver"
+title: "Convex Hull Parallel Solver"
 description: "Parallel implementation of the Divide and Conquer algorithm for the convex hull problem, using MPI and OpenMP on an HPC cluster."
 weight: 205
 ps2:
@@ -7,7 +7,7 @@ ps2:
   order: 5
   model: "CH"
   hue: 12
-  save: "Convex Hull Problem Solver"
+  save: "Convex Hull Parallel Solver"
   short: "Convex Hull Solver"
   subtitle: "MSc · HPC"
   summary: "Parallel divide-and-conquer convex hull in C with MPI and OpenMP on an HPC cluster."

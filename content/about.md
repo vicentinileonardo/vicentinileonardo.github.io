@@ -24,14 +24,14 @@ In 2025, I graduated with a **Master's degree in Computer Science** from the **U
 <br>
 
 From 2025 to 2026, I was a **Software Engineer** at Krateo PlatformOps, where I:
-- **evolved core platform components**, including:
+- **built and evolved core platform components**, including:
   - a [generator for multi-controller Kubernetes Operators](https://github.com/krateoplatformops/oasgen-provider)
   - a [dynamic Kubernetes controller](https://github.com/krateoplatformops/rest-dynamic-controller)
   - a [read-only HTTP API for querying current Kubernetes resources](https://github.com/krateoplatformops/resources-presenter)
 - integrated external services and systems into **cloud-native environments**
 - provided rotational **L1–L3 support for enterprise platform deployments**
 - planned and executed **platform migration initiatives** for enterprise customers
-- designed and implemented **AI agents architectures** running on Kubernetes
+- evaluated agent frameworks (kagent, Google ADK), memory systems, and **MCP/A2A protocols** for Krateo's multi-agent Autopilot
 
 I am currently **open to new roles** as a Software Engineer in platform & infrastructure. EU citizen, open to relocation across the EU, UK & CH.
 
