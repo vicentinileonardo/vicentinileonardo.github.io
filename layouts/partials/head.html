@@ -24,7 +24,9 @@
 <!-- CSS -->
 {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+<link id="theme-css" rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+{{- /* the theme's global rules (buttons, letter-spacing, lists) would leak into the PS2 menu, so it is off in PS2 mode */}}
+<script>if (document.documentElement.classList.contains('ps2')) document.getElementById('theme-css').media = 'not all';</script>
 
 {{ range $val := $.Site.Params.customCSS }}
     {{ if gt (len $val) 0 }}

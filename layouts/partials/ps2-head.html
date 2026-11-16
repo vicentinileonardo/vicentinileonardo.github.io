@@ -1,0 +1,24 @@
+{{- /* Switches the page into the PS2 menu before first paint. Classic view (no JS, ?classic=1, or the
+     remembered choice) keeps the plain theme page. If the menu fails to start, the plain page comes back. */ -}}
+<script>
+(function () {
+  var d = document.documentElement, v = null;
+  try {
+    var q = new URLSearchParams(location.search);
+    if (q.has('classic')) {
+      localStorage.setItem('lvView', q.get('classic') === '0' ? 'ps2' : 'classic');
+      history.replaceState(null, '', location.pathname + location.hash);
+    }
+    v = localStorage.getItem('lvView');
+  } catch (e) {}
+  if (v === 'classic') return;
+  d.classList.add('ps2');
+  d.dataset.ps2json = '{{ "ps2.json" | relURL }}';
+  window.__ps2fail = function () { d.classList.remove('ps2'); var t = document.getElementById('theme-css'); if (t) t.media = 'all'; };
+  setTimeout(function () { if (!window.__ps2ready) window.__ps2fail(); }, 8000);
+  var add = function (href) { var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = href; document.head.appendChild(l); };
+  add('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Share+Tech+Mono&display=swap');
+  add('{{ "ps2/ps2.css" | relURL }}');
+})();
+</script>
+<style>#ps2app{display:none}html.ps2 #ps2app{display:block}html.ps2 body>.container{display:none}html.ps2,html.ps2 body{background:#000}</style>
