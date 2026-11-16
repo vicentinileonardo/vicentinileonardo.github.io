@@ -1,0 +1,16 @@
+{{- /* Plain-HTML view of a PS2 save (project, job or degree). The same front matter feeds the PS2 menu via /index.json. */ -}}
+{{- with .Params.ps2 }}<p class="ps2-meta"><em>{{ .meta }}</em></p>{{ end }}
+<p class="ps2-lead"><strong>{{ .Description }}</strong></p>
+{{ .Content }}
+{{- with .Params.stack }}
+<h2>Tech stack</h2>
+<p class="ps2-stack">{{ delimit . " · " }}</p>
+{{- end }}
+{{- with .Params.links }}
+<h2>Links</h2>
+<ul class="ps2-links">
+{{- range . }}
+  <li><a href="{{ .url | relURL }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>{{ .label }}</a></li>
+{{- end }}
+</ul>
+{{- end }}

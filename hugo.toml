@@ -34,6 +34,9 @@ disableSitemap = false
 disable404     = false
 disableHugoGeneratorInject = false
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [permalinks]
   posts = "/posts/:year/:month/:title/"
 

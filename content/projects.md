@@ -6,17 +6,17 @@ description: "A selection of professional and academic software projects by Leon
 A selected list of software projects I have worked on:
 
 
-001 - [**OASGen Provider**](https://github.com/krateoplatformops/oasgen-provider)
+001 - [**OASGen Provider**](/projects/oasgen-provider)
 
-002 - [**Rest Dynamic Controller**](https://github.com/krateoplatformops/rest-dynamic-controller)
+002 - [**Rest Dynamic Controller**](/projects/rest-dynamic-controller)
 
-003 - [**`resources-presenter`**](https://github.com/krateoplatformops/resources-presenter)
+003 - [**`resources-presenter`**](/projects/resources-presenter)
 
-004 - [**Azure DevOps Provider for Krateo Operator Generator**](https://github.com/krateoplatformops-blueprints/azuredevops-provider-kog)
+004 - [**Azure DevOps Provider for Krateo Operator Generator**](/projects/azuredevops-provider)
 
-005 - [**GitHub Provider for Krateo Operator Generator**](https://github.com/krateoplatformops-blueprints/github-provider-kog)
+005 - [**GitHub Provider for Krateo Operator Generator**](/projects/github-provider)
 
-006 - [**systemslabs**](https://systemslabs.dev)
+006 - [**systemslabs**](/projects/systemslabs)
 
 <br>
 
