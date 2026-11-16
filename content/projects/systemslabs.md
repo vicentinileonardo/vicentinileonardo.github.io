@@ -14,8 +14,7 @@ ps2:
   tags: ["Go", "React", "TypeScript", "OpenTofu", "Podman"]
   meta: "Personal project · 2026"
 stack: ["Go", "React", "TypeScript", "OpenTofu", "Podman"]
-links:
-  - {label: "Visit Site", url: "https://systemslabs.dev"}
+links: []
 ---
 ## Overview
 

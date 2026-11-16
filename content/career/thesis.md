@@ -9,13 +9,13 @@ ps2:
   hue: 150
   save: "Master's Thesis Research"
   short: "Thesis Research"
-  subtitle: "Krateo · 2024–2025"
+  subtitle: "Krateo"
   summary: "Policy-driven, Kubernetes-based resource management across multiple clouds, developed with Krateo PlatformOps and published as a journal paper."
   tags: ["Kubernetes", "Open Policy Agent", "Helm", "AWS", "GCP", "Azure", "MLflow", "KServe", "PyTorch"]
   meta: "Master thesis researcher – Kubernetes, Cloud & Platform · Oct 2024 – Apr 2025"
 stack: ["Kubernetes", "Open Policy Agent", "Helm", "AWS", "GCP", "Azure", "MLflow", "KServe", "PyTorch"]
 links:
-  - {label: "Read Paper", url: "https://arxiv.org/abs/2509.13325"}
+  - {label: "Read Paper", url: "https://doi.org/10.1016/j.future.2026.108749"}
 ---
 ## Thesis
 
