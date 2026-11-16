@@ -60,7 +60,7 @@ disableHugoGeneratorInject = false
 
   # Home subtitle of the index page.
   #
-  homeSubtitle = "Software Engineer - K8s/Cloud/Platform | BSc & MSc in Computer Science @ UniTn | Ex-Intern @ ESA"
+  homeSubtitle = "Software Engineer - Platform & Infrastructure | Open to new roles | BSc & MSc in Computer Science @ UniTn | Ex-Intern @ ESA"
 
   # Set a background for the homepage
   # backgroundImage = "assets/images/background.jpg"
@@ -226,10 +226,6 @@ disableHugoGeneratorInject = false
   [[params.social]]
     name = "linkedin"
     url  = "https://www.linkedin.com/in/leonardovicentini"
-
-  [[params.social]]
-    name = "twitter"
-    url  = "https://twitter.com/leovice99"
 
   #[[params.social]]
   #  name = "stackoverflow"
