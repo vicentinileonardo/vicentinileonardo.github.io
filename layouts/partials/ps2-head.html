@@ -16,6 +16,10 @@
   d.dataset.ps2json = '{{ "ps2.json" | relURL }}';
   window.__ps2fail = function () { d.classList.remove('ps2'); var t = document.getElementById('theme-css'); if (t) t.media = 'all'; };
   setTimeout(function () { if (!window.__ps2ready) window.__ps2fail(); }, 8000);
+  // a script error while the menu is starting brings the plain page back at once, instead of a black screen
+  var fromMenu = function (s) { return String(s || '').indexOf('ps2/ps2.js') >= 0; };
+  addEventListener('error', function (e) { if (!window.__ps2ready && fromMenu(e.filename)) window.__ps2fail(); });
+  addEventListener('unhandledrejection', function (e) { if (!window.__ps2ready && fromMenu(e.reason && e.reason.stack)) window.__ps2fail(); });
   var add = function (href) { var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = href; document.head.appendChild(l); };
   add('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Share+Tech+Mono&display=swap');
   add('{{ "ps2/ps2.css" | relURL }}');

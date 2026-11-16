@@ -14,7 +14,6 @@ let DATA;
 try { const r = await fetch(document.documentElement.dataset.ps2json || '/ps2.json'); if (!r.ok) throw new Error(r.status); DATA = await r.json(); }
 catch (e) { window.__ps2fail && window.__ps2fail(); return; }
 if (!ON()) return;
-window.__ps2ready = true;
 const toSave = x => ({id:x.id, s:x.save, t:x.short, c:x.subtitle, h:x.hue, d:x.summary, tags:x.tags || [], meta:x.meta, lead:x.lead,
   html:x.html, stack:x.stack || [], url:x.url, title:x.title, l:(x.links || []).map(l => [l.label, l.url])});
 const CARDS = ['career','pro','uni'].map(k => (DATA.cards[k] || []).map(toSave));
@@ -512,7 +511,10 @@ CONF.forEach((c,i) => {
 });
 {
   const esc = x => String(x).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  const work = QV_WORK.map(([id, line]) => { const p = PROJECTS.find(q => q.id === id); return `<li><a href="${esc(p.l[0][1])}" target="_blank" rel="noopener">${esc(p.t)}</a> <small>· ${esc(line)}</small></li>`; }).join('');
+  // each line links to the project's first external link, or to its own page when it has none
+  const work = QV_WORK.map(([id, line]) => { const p = PROJECTS.find(q => q.id === id); if (!p) return '';
+    const ext = p.l && p.l[0], href = ext ? ext[1] : p.url, tgt = ext ? ' target="_blank" rel="noopener"' : '';
+    return `<li><a href="${esc(href)}"${tgt}>${esc(p.t)}</a> <small>· ${esc(line)}</small></li>`; }).join('');
   $('#qv').innerHTML = `
     <dt>Role</dt><dd>Software Engineer – Platform &amp; Infrastructure</dd>
     <dt>Status</dt><dd><span class="open">Open to new roles</span> · relocation EU, UK, CH</dd>
@@ -989,4 +991,5 @@ if (R0) {
 } else if (seenBoot) show('menu'); else boot();
 startLoop();
 if (reduce) draw(performance.now());
+window.__ps2ready = true;
 })();
