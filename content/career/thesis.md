@@ -14,7 +14,8 @@ ps2:
   tags: ["Kubernetes", "Open Policy Agent", "Helm", "AWS", "GCP", "Azure", "MLflow", "KServe", "PyTorch"]
   meta: "Master thesis researcher – Kubernetes, Cloud & Platform · Oct 2024 – Apr 2025"
 stack: ["Kubernetes", "Open Policy Agent", "Helm", "AWS", "GCP", "Azure", "MLflow", "KServe", "PyTorch"]
-links: []
+links:
+  - {label: "Read Paper", url: "https://arxiv.org/abs/2509.13325"}
 ---
 ## Thesis
 

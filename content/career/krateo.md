@@ -14,8 +14,7 @@ ps2:
   tags: ["Go", "Kubernetes", "Operators", "OpenAPI", "Postgres", "OpenTelemetry", "Prometheus", "Grafana"]
   meta: "May 2025 – Jun 2026 · Verona, Italy (remote)"
 stack: ["Go", "Kubernetes", "Operators", "OpenAPI", "Postgres", "OpenTelemetry", "Prometheus", "Grafana"]
-links:
-  - {label: "Visit krateo.io", url: "https://krateo.io/"}
+links: []
 ---
 ## Platform components
 
