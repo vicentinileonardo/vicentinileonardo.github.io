@@ -734,6 +734,7 @@ function setLayout(){
   stage.classList.toggle('portrait', PORTRAIT);
   stage.style.width = SW + 'px'; stage.style.height = SH + 'px';
   stage.style.transform = `scale(${k})`;
+  document.documentElement.style.setProperty('--ps2k', k);   // stage zoom, for page-level overlays
   stage.style.setProperty('--ox', OX + 'px'); stage.style.setProperty('--oy', OY + 'px');
   stage.style.setProperty('--bw', BW + 'px'); stage.style.setProperty('--bh', BH + 'px');
   cv.width = Math.round(SW*RES); cv.height = Math.round(SH*RES); ctx.setTransform(RES,0,0,RES,0,0);
@@ -953,7 +954,9 @@ function drawGrain(now){
 }
 drawGrain(0);
 let rafOn = false;
-function loop(){ if (reduce) { rafOn = false; return; } const now = performance.now(); draw(now); drawGrain(now); requestAnimationFrame(loop); }
+/* ~60 fps cap: 120 Hz screens would otherwise redraw twice as often for no visible gain */
+let lastFrame = 0;
+function loop(now){ if (reduce) { rafOn = false; return; } requestAnimationFrame(loop); if (now - lastFrame < 15) return; lastFrame = now; draw(now); drawGrain(now); }
 function startLoop(){ if (!rafOn && !reduce) { rafOn = true; requestAnimationFrame(loop); } }
 mq.addEventListener('change', e => { reduce = e.matches; startLoop(); if (reduce && S.scene === 'boot') { clearTimeout(bootTimer); show('menu'); } draw(performance.now()); });
 

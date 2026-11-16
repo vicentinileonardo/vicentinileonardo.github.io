@@ -338,3 +338,5 @@ html.ps2 .screen p{margin:0}
 .dwrap p{margin:0 0 .6em}
 .classic-link{position:fixed;right:max(10px,env(safe-area-inset-right,0px));bottom:max(8px,env(safe-area-inset-bottom,0px));z-index:60;font:12px/1 var(--mono);color:#8b93a6;text-decoration:none;padding:6px 8px;border:1px solid rgba(160,180,220,.25);border-radius:4px;background:rgba(0,0,0,.55);opacity:.6}
 .classic-link:hover,.classic-link:focus-visible{opacity:1;color:#e6ecf5;outline:none;border-color:#3cdcff}
+/* portrait phones: the button hints fill the bottom edge, so the link moves to the top-right corner */
+@media (max-aspect-ratio:4/5){.classic-link{bottom:auto;top:max(8px,env(safe-area-inset-top,0px));font-size:11px;padding:5px 7px}#ps2app:has(.bands-on) .classic-link{top:calc(56px * var(--ps2k,1) + 6px)}}
