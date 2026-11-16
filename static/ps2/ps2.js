@@ -184,12 +184,14 @@ const LP = {
   // faces pushed inside fn form one solid part: parts are depth-sorted as a whole, which keeps
   // stacked or touching solids from bleeding through each other
   grp(m, fn){ const n = m.length; fn(); const g = LP._g = (LP._g || 0) + 1; for (let i = n; i < m.length; i++) if (m[i].g == null) m[i].g = g; },
+  // a convex part (box, cylinder): its back faces are culled, so it can never paint its own far side over its near side
+  solid(m, fn){ const n = m.length; LP.grp(m, fn); for (let i = n; i < m.length; i++) if (!m[i].n) m[i].cv = 1; },
   // a thin surface detail with an outward normal: drawn only when it faces the viewer, just above its face
   decal(m, p, c, n, e){ m.push({p, c, n, e, zb:.01}); },
   xf(fs, fn){ fs.forEach(f => { f.p = f.p.map(fn); if (f.n) { const o = fn([0,0,0]), q = fn(f.n); f.n = [q[0]-o[0], q[1]-o[1], q[2]-o[2]]; } }); },
   // a closed book: one solid cover with page edges on three sides, spine along the long -z edge
   book(m, x,y,z, W,H,D, rot, c){ const b = [], pg = [238,232,214], t = H/2 - .035, e = .004, z0 = -D/2 + .06, z1 = D/2 - .01, xw = W/2 - .01;
-    LP.grp(b, () => { LP.box(b, 0,0,0, W,H,D, c);
+    LP.solid(b, () => { LP.box(b, 0,0,0, W,H,D, c);
       LP.decal(b, [[-xw,-t,D/2+e],[xw,-t,D/2+e],[xw,t,D/2+e],[-xw,t,D/2+e]], pg, [0,0,1]);
       LP.decal(b, [[W/2+e,-t,z1],[W/2+e,-t,z0],[W/2+e,t,z0],[W/2+e,t,z1]], pg, [1,0,0]);
       LP.decal(b, [[-W/2-e,-t,z0],[-W/2-e,-t,z1],[-W/2-e,t,z1],[-W/2-e,t,z0]], pg, [-1,0,0]); });
@@ -206,17 +208,18 @@ function star(n, R, r){ return Array.from({length:n*2}, (_,i) => { const a = Mat
 const MODELS = {
   // Krateo: a three-headed guard dog (cerberus), low-poly
   KR: () => { const m = [], fur = [96,100,122], dark = [58,60,76], eye = [110,230,255];
-    LP.box(m, 0,-.08,-.18, .62,.42,.95, fur);
-    [[-.2,.12],[.2,.12],[-.2,-.48],[.2,-.48]].forEach(([x,z]) => LP.box(m, x,-.5,z, .15,.46,.15, dark));
-    LP.bar(m, [0,.04,-.62], [0,.38,-.86], .05, fur);
-    [-.36,0,.36].forEach((x, i) => { const y = i === 1 ? .5 : .4, z = .46 - (i === 1 ? 0 : .04);
-      LP.bar(m, [x*.45,.08,.18], [x,y - .08,z - .12], .09, fur);
-      LP.box(m, x,y,z, .27,.24,.28, fur);
-      LP.box(m, x,y - .06,z + .2, .15,.12,.17, dark);
-      LP.box(m, x - .07,y + .03,z + .145, .05,.05,.02, eye, 1); LP.box(m, x + .07,y + .03,z + .145, .05,.05,.02, eye, 1);
-      LP.cone(m, x - .08,y + .19,z - .04, .06,0,.15,4, dark); LP.cone(m, x + .08,y + .19,z - .04, .06,0,.15,4, dark);
+    // every solid is its own part, so small pieces never sort through the body or the heads
+    LP.solid(m, () => LP.box(m, 0,-.08,-.18, .62,.42,.95, fur));
+    [[-.2,.12],[.2,.12],[-.2,-.48],[.2,-.48]].forEach(([x,z]) => LP.solid(m, () => LP.box(m, x,-.5,z, .15,.46,.15, dark)));
+    LP.solid(m, () => LP.bar(m, [0,.04,-.62], [0,.38,-.86], .05, fur));
+    [-.36,0,.36].forEach((x, i) => { const y = i === 1 ? .5 : .4, z = .46 - (i === 1 ? 0 : .04), fz = z + .14 + .004;
+      LP.solid(m, () => LP.bar(m, [x*.45,.08,.18], [x,y - .08,z - .12], .09, fur));
+      // the eyes are decals on the head's front face: drawn right after it, and only while it faces the viewer
+      LP.solid(m, () => { LP.box(m, x,y,z, .27,.24,.28, fur);
+        [-.07, .07].forEach(ex => LP.decal(m, [[x+ex-.025,y+.005,fz],[x+ex+.025,y+.005,fz],[x+ex+.025,y+.055,fz],[x+ex-.025,y+.055,fz]], eye, [0,0,1], 1)); });
+      LP.solid(m, () => LP.box(m, x,y - .06,z + .2, .15,.12,.17, dark));
+      [-.08, .08].forEach(ex => LP.solid(m, () => LP.cone(m, x + ex,y + .19,z - .04, .06,0,.15,4, dark)));
     });
-    LP.box(m, 0,.12,.18, .5,.08,.14, [180,60,70]);
     return m; },
   // Thesis: a Kubernetes helm steering three clouds (AWS, GCP, Azure), with a green leaf for carbon-aware scheduling
   TH: t => { const m = [], tt = t || 0, blue = [50,108,228], white = [236,240,250];
@@ -274,8 +277,9 @@ const MODELS = {
   // Bachelor's degree: a book with a rolled diploma tied with a red ribbon
   BS: t => { const m = [], paper = [244,238,220], red = [190,40,50];
     LP.book(m, 0,-.5,0, 1.15,.22,.98, -.15, [50,90,160]);
+    const nBook = m.length;
     // the scroll is three solid segments along its axis (paper, ribbon band, paper) so each sorts cleanly
-    const seg = (x0, x1, r, c) => LP.grp(m, () => { const d = []; LP.cyl(d, 0,0,0, r, x1 - x0, 12, c);
+    const seg = (x0, x1, r, c) => LP.solid(m, () => { const d = []; LP.cyl(d, 0,0,0, r, x1 - x0, 12, c);
       const cr = Math.cos(.45), sr = Math.sin(.45), xm = (x0 + x1)/2;
       LP.xf(d, ([x,y,z]) => { const x1_ = -y + xm, y1 = x; return [x1_*cr - z*sr, y1 - .22, x1_*sr + z*cr]; }); m.push(...d); });
     seg(-.58,-.06,.16, paper); seg(-.06,.06,.175, red); seg(.06,.58,.16, paper);
@@ -292,7 +296,10 @@ const MODELS = {
         for (let k = 0; k < 6; k++) { const a0 = .3 + k*.38, a1 = a0 + .38;
           LP.grp(m, () => LP.bar(m, W([sd*R*Math.sin(a0), -R*Math.cos(a0), 0]), W([sd*R*Math.sin(a1), -R*Math.cos(a1), 0]), .011, [110,90,50])); } });
       LP.grp(m, () => { const b = []; LP.box(b, 0,-R,0, .1,.07,.04, [235,190,60]); LP.xf(b, W); m.push(...b); }); }
-    LP.grp(m, () => LP.bar(m, T(0,-.3,.17), T(.1,-.38,.42), .02, red)); LP.grp(m, () => LP.bar(m, T(0,-.3,.17), T(-.1,-.38,.44), .02, red));
+    const nTails = m.length;
+    LP.solid(m, () => LP.bar(m, T(0,-.3,.17), T(.1,-.38,.42), .02, red)); LP.solid(m, () => LP.bar(m, T(0,-.3,.17), T(-.1,-.38,.44), .02, red));
+    // fixed layers: the book, then the ribbon tails lying on it (their ends tuck under the scroll), then the scroll and wreath
+    for (let i = nBook; i < m.length; i++) m[i].top = i >= nTails ? 1 : 2;
     return m; },
   // OASGen: a press stamping out small operators (the piston moves)
   OG: t => { const m = [], py = .12 + .12*Math.sin((t || 0)*3);
@@ -429,16 +436,21 @@ function renderModel(cv, id, t){
   // long objects swing instead of turning end-on
   const yaw = t == null ? .55 : (SWING[id] ? .3 + .55*Math.sin(t*1.4) : t*1.1), pitch = .38;
   const cy = Math.cos(yaw), sy = Math.sin(yaw), cp = Math.cos(pitch), sp = Math.sin(pitch);
-  const sc = Math.min(W,H)*.44/m._r;
+  const sc = Math.min(W,H)*.44/m._r, EZ = 5*m._r;   // the projection below puts the eye at z = 5r
+  const toEye = (P, n) => { let x = 0, y = 0, z = 0; P.forEach(q => { x -= q[0]; y -= q[1]; z += EZ - q[2]; }); const l = Math.hypot(x,y,z) || 1; return (n[0]*x + n[1]*y + n[2]*z)/l; };
   const faces = m.map(f => { const p = f.p.map(([x,y,z]) => { const x1 = x*cy + z*sy, z1 = -x*sy + z*cy; return [x1, y*cp - z1*sp, y*sp + z1*cp]; });
-    let zc = 0; p.forEach(q => zc += q[2]); let nv = 1; if (f.n) { const [nx,ny,nz] = f.n, z1 = -nx*sy + nz*cy; nv = ny*sp + z1*cp; }
-    return {p, zc: zc/p.length + (f.zb || 0), c:f.c, e:f.e, a:f.a, fo:f.fo, bo:f.bo, nb:f.nb, top:f.top, g:f.g, nv, dc:!!f.n}; });
+    let zc = 0; p.forEach(q => zc += q[2]); let nv = 1;
+    // decals: visible when the normal points at the eye (perspective-correct, so details don't pop in at the silhouette)
+    if (f.n) { const [nx,ny,nz] = f.n, z1 = -nx*sy + nz*cy, n = [nx*cy + nz*sy, ny*cp - z1*sp, ny*sp + z1*cp]; nv = toEye(p, n); }
+    return {p, zc: zc/p.length + (f.zb || 0), c:f.c, e:f.e, a:f.a, fo:f.fo, bo:f.bo, nb:f.nb, top:f.top, g:f.g, nv, dc:!!f.n, cv:f.cv}; });
   const facing = cy*cp;  // view-space z of the model's +z (front) axis
   // parts behind a front panel (a stand's neck) go first while the front faces the viewer
   if (facing > 0) faces.forEach(f => { if (f.nb) f.zc -= 1; });
   // grouped faces sort by their part's mean depth first, then by their own depth inside the part
-  const GS = {}; faces.forEach(f => { if (f.g != null && !f.dc) { const q = GS[f.g] ||= [0,0]; q[0] += f.zc; q[1]++; } });
-  faces.forEach(f => { if (f.top) f.zc += 10; f.k = f.g != null ? GS[f.g][0]/GS[f.g][1] + (f.top ? 10 : 0) : f.zc; });
+  const GS = {}, GC = {}; faces.forEach(f => { if (f.g != null && !f.dc) { const q = GS[f.g] ||= [0,0]; q[0] += f.zc; q[1]++;
+    if (f.cv) { const c = GC[f.g] ||= [0,0,0,0]; f.p.forEach(v => { c[0] += v[0]; c[1] += v[1]; c[2] += v[2]; c[3]++; }); } } });
+  // top = a layer number: parts resting on others (layer 1 over 0, 2 over 1) always draw after them
+  faces.forEach(f => { const L = 10*(+f.top || 0); f.zc += L; f.k = f.g != null ? GS[f.g][0]/GS[f.g][1] + L : f.zc; });
   // inside a part, surface details go after the solid's own faces: a visible detail always lies on a
   // front face of a convex solid, and front faces of a convex solid never overlap each other
   faces.sort((a,b) => (a.k - b.k) || (a.g != null && b.g === a.g ? (a.dc - b.dc) : 0) || (a.zc - b.zc));
@@ -446,7 +458,11 @@ function renderModel(cv, id, t){
     if ((f.fo && facing < .02) || (f.bo && facing > -.02) || f.nv < .03) continue;
     let nx = 0, ny = 0, nz = 0; const P = f.p;
     for (let i = 0; i < P.length; i++) { const a = P[i], b = P[(i+1)%P.length]; nx += (a[1]-b[1])*(a[2]+b[2]); ny += (a[2]-b[2])*(a[0]+b[0]); nz += (a[0]-b[0])*(a[1]+b[1]); }
-    const nl = Math.hypot(nx,ny,nz) || 1; nx /= nl; ny /= nl; nz /= nl; if (nz < 0) { nx = -nx; ny = -ny; nz = -nz; }
+    const nl = Math.hypot(nx,ny,nz) || 1; nx /= nl; ny /= nl; nz /= nl;
+    if (f.cv) { const c = GC[f.g]; let mx = 0, my = 0, mz = 0; P.forEach(q => { mx += q[0]; my += q[1]; mz += q[2]; });
+      const L = P.length, d = (mx/L - c[0]/c[3])*nx + (my/L - c[1]/c[3])*ny + (mz/L - c[2]/c[3])*nz;
+      const o = d < 0 ? -1 : 1; if (toEye(P, [o*nx, o*ny, o*nz]) < 0) continue; }   // outward normal points away from the eye: a back face
+    if (nz < 0) { nx = -nx; ny = -ny; nz = -nz; }
     const dif = Math.max(0, nx*LIGHT[0] + ny*LIGHT[1] + nz*LIGHT[2]);
     const sh = f.e ? 1 : .34 + .66*dif, spec = f.e ? 0 : 70*Math.pow(Math.max(0, nz*.8 + ny*.6), 18);
     const col = f.c.map(v => Math.min(255, Math.round(v*sh + spec)));
