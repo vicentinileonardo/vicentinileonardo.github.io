@@ -13,7 +13,7 @@ ps2:
   summary: "Suggests daytrip destinations in Italy from weather, travel time and other signals."
   tags: ["Node.js", "Python", "Docker", "AWS"]
   meta: "MSc course: Service Design"
-stack: ["AWS", "Docker", "NGINX", "HTML", "CSS", "Bootstrap", "JavaScript", "Python", "Flask", "NodeJS", "ExpressJS", "MongoDB"]
+stack: ["AWS", "Docker", "NGINX", "HTML", "CSS", "Bootstrap", "JavaScript", "Python", "Flask", "Node.js", "Express", "MongoDB"]
 links:
   - {label: "Open Repository", url: "https://github.com/vicentinileonardo/daytrip"}
   - {label: "Read Report", url: "/projects/reports/daytrip.pdf"}

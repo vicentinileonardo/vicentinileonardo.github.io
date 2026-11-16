@@ -11,9 +11,9 @@ ps2:
   short: "Outpainting Localizer"
   subtitle: "MSc · Multimedia Data Security"
   summary: "RAFT-based model that masks outpainted regions in video frames. F1 0.786."
-  tags: ["Python", "Deep learning"]
+  tags: ["Python", "NumPy", "RAFT"]
   meta: "MSc course: Multimedia Data Security"
-stack: ["Python", "NumPy"]
+stack: ["Python", "NumPy", "RAFT"]
 links:
   - {label: "Read Report", url: "/projects/reports/video_outpainting_localizer.pdf"}
 ---

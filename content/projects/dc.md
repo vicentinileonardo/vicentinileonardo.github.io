@@ -13,7 +13,7 @@ ps2:
   summary: "Akka-based two-level cache with crash detection and recovery, targeting eventual consistency."
   tags: ["Java", "Akka"]
   meta: "MSc course: Distributed Systems"
-stack: ["Java"]
+stack: ["Java", "Akka"]
 links:
   - {label: "Open Repository", url: "https://github.com/vicentinileonardo/distributed-cache"}
   - {label: "Read Report", url: "/projects/reports/distributed_cache.pdf"}

@@ -13,7 +13,7 @@ ps2:
   summary: "REST API with interest and location matching plus a simple chat."
   tags: ["Node.js", "Express", "MongoDB"]
   meta: "BSc course: Software Engineering 2"
-stack: ["HTML", "CSS", "JavaScript", "NodeJS", "ExpressJS", "MongoDB"]
+stack: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "MongoDB"]
 links:
   - {label: "Open Repository", url: "https://github.com/vicentinileonardo/dating-app"}
 ---

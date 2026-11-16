@@ -11,9 +11,9 @@ ps2:
   short: "Krateo"
   subtitle: "Software Engineer · 2025–2026"
   summary: "Software Engineer – Kubernetes, Cloud & Platform at a Kubernetes-based developer platform startup for enterprise clients."
-  tags: ["Go", "Kubernetes", "Operators", "OpenAPI", "Postgres", "OpenTelemetry", "Prometheus", "Grafana"]
+  tags: ["Go", "Kubernetes", "Kubernetes Operators", "OpenAPI", "Postgres", "OpenTelemetry", "Prometheus", "Grafana"]
   meta: "May 2025 – Jun 2026 · Verona, Italy (remote)"
-stack: ["Go", "Kubernetes", "Operators", "OpenAPI", "Postgres", "OpenTelemetry", "Prometheus", "Grafana"]
+stack: ["Go", "Kubernetes", "Kubernetes Operators", "OpenAPI", "Postgres", "OpenTelemetry", "Prometheus", "Grafana"]
 links: []
 ---
 ## Platform components

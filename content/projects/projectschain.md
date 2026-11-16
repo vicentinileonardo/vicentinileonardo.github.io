@@ -13,7 +13,7 @@ ps2:
   summary: "Plugin for design e-shops: IP protection and fair royalty splits via smart contracts."
   tags: ["Solidity", "Chainlink", "Node.js", "Redis"]
   meta: "MSc course: Blockchain"
-stack: ["HTML", "CSS", "JavaScript", "Vue", "Web3JS", "Solidity", "Chainlink", "NodeJS", "ExpressJS", "Redis"]
+stack: ["HTML", "CSS", "JavaScript", "Vue", "web3.js", "Solidity", "Chainlink", "Node.js", "Express", "Redis"]
 links:
   - {label: "Open Repository", url: "https://github.com/vicentinileonardo/projectschain"}
   - {label: "Read Report", url: "/projects/reports/projectschain.pdf"}

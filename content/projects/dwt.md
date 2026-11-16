@@ -13,7 +13,7 @@ ps2:
   summary: "Watermarking tool for the “Catch the Mark” competition: embed, detect and attack."
   tags: ["Python", "NumPy", "Azure"]
   meta: "MSc course: Multimedia Data Security"
-stack: ["Python", "NumPy"]
+stack: ["Python", "NumPy", "Azure"]
 links:
   - {label: "Open Repository", url: "https://github.com/vicentinileonardo/DWT-SVD-digital-watermarking"}
   - {label: "Read Report", url: "/projects/reports/digital_watermarking_tool.pdf"}

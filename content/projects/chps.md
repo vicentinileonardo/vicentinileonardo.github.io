@@ -13,7 +13,7 @@ ps2:
   summary: "Parallel divide-and-conquer convex hull in C with MPI and OpenMP on an HPC cluster."
   tags: ["C", "MPI", "OpenMP"]
   meta: "MSc course: High-Performance Computing (HPC)"
-stack: ["C", "Python"]
+stack: ["C", "MPI", "OpenMP", "Python"]
 links:
   - {label: "Open Repository", url: "https://github.com/vicentinileonardo/parallel-convex-hull"}
   - {label: "Read Report", url: "/projects/reports/parallel_convex_hull_solver.pdf"}
