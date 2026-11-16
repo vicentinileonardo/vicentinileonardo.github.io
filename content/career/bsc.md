@@ -9,7 +9,7 @@ ps2:
   hue: 215
   save: "Bachelor's Degree"
   short: "BSc Computer Science"
-  subtitle: "University of Trento · 2018–2021"
+  subtitle: "University of Trento"
   summary: "Bachelor’s degree in Computer Science at the University of Trento, Italy."
   tags: []
   meta: "Sep 2018 – Sep 2021 · Trento, Italy"

@@ -9,7 +9,7 @@ ps2:
   hue: 355
   save: "Master's Degree"
   short: "MSc Computer Science"
-  subtitle: "University of Trento · 2021–2025"
+  subtitle: "University of Trento"
   summary: "Master’s degree in Computer Science (taught in English) at the University of Trento, Italy."
   tags: []
   meta: "Sep 2021 – Mar 2025 · Trento, Italy"
