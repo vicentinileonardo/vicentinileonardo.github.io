@@ -43,6 +43,9 @@ new ResizeObserver(() => { if (typeof setLayout === 'function') setLayout(); }).
 const S = {scene:'boot', menu:0, dev:0, card:0, save:0, opt:0, conf:0, clock:true, t0:performance.now(), tint:0};
 const layers = {boot:'#Lboot', menu:'#Lmenu', root:'#Lroot', card:'#Lcard', save:'#Lsave', conf:'#Lconf', ver:'#Lver'};
 let bootTimer = 0, nav = 0;
+// boot screen length; the main menu then fades in over 0.45 s, so it appears at BOOT_MS + 450 ms = 3.0 s
+// (keep the bootTxt animation in ps2.css at the same length)
+const BOOT_MS = 2550;
 
 function show(scene){
   $('#contact').hidden = true; $('#dov').hidden = true;
@@ -86,7 +89,7 @@ function boot(){
   show('boot');
   const L = $('#Lboot'); L.classList.remove('run'); void L.offsetWidth; L.classList.add('run');
   try { sessionStorage.setItem('lvBooted', '1'); } catch (e) {}
-  bootTimer = setTimeout(() => go('menu'), 2200);
+  bootTimer = setTimeout(() => go('menu'), BOOT_MS);
 }
 function skipBoot(){ clearTimeout(bootTimer); go('menu'); }
 
@@ -778,6 +781,7 @@ TOW.sort((a,b) => b.r - a.r);
 const LIGHTS = [['255,70,70',0],['70,230,120',2.1],['170,100,255',4.2],['90,150,255',1.1]];
 function quad(pts){ ctx.beginPath(); ctx.moveTo(pts[0][0],pts[0][1]); for (let i = 1; i < 4; i++) ctx.lineTo(pts[i][0],pts[i][1]); ctx.closePath(); }
 function drawBoot(t){
+  t *= 2.2 / (BOOT_MS / 1000);   // the boot was choreographed for 2.2 s: stretch it evenly to BOOT_MS
   ctx.globalCompositeOperation = 'source-over'; ctx.globalAlpha = 1;
   ctx.fillStyle = '#000'; ctx.fillRect(0,0,SW,SH);
   const vis = clamp((t-.1)/.5) * (1 - clamp((t-1.75)/.4));
