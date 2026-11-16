@@ -74,7 +74,7 @@ body{overflow:hidden;overscroll-behavior:none}
 /* boot */
 .boot-txt{position:absolute;left:0;right:0;top:206px;text-align:center;color:#fff;font-size:21px;letter-spacing:.12em;opacity:0}
 .boot-txt small{display:block;font-size:13px;letter-spacing:.3em;color:#b8bfd0;margin-top:6px}
-#Lboot.run .boot-txt{animation:bootTxt 2.2s linear forwards}
+#Lboot.run .boot-txt{animation:bootTxt 2.55s linear forwards}
 @keyframes bootTxt{0%,22%{opacity:0}40%,78%{opacity:1}94%,100%{opacity:0}}
 
 /* main menu: items centred on x=430 */
