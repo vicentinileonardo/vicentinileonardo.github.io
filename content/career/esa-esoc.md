@@ -14,8 +14,7 @@ ps2:
   tags: ["GitLab CI/CD", "GitOps", "Prometheus", "Grafana", "Alertmanager", "Ansible", "Kubernetes", "Helm"]
   meta: "Apr – Jul 2024 · Darmstadt, Germany"
 stack: ["GitLab CI/CD", "GitOps", "Prometheus", "Grafana", "Alertmanager", "Ansible", "Kubernetes", "Helm"]
-links:
-  - {label: "Visit ESOC", url: "https://www.esa.int/About_Us/ESOC"}
+links: []
 ---
 ## What I did
 
