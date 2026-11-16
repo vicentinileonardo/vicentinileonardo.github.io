@@ -21,7 +21,7 @@ links:
 
 - A generator for multi-controller **Kubernetes Operators**.
 - Failures are isolated per resource type.
-- One of the core platform components I designed and developed at Krateo PlatformOps.
+- One of the core platform components I evolved at Krateo PlatformOps.
 
 ## What I did
 

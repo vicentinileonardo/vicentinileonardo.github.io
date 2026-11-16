@@ -24,7 +24,7 @@ In 2025, I graduated with a **Master's degree in Computer Science** from the **U
 <br>
 
 From 2025 to 2026, I was a **Software Engineer** at [Krateo PlatformOps](https://krateo.io/), where I:
-- **designed and developed core platform components**, including:
+- **evolved core platform components**, including:
   - a [generator for multi-controller Kubernetes Operators](https://github.com/krateoplatformops/oasgen-provider)
   - a [dynamic Kubernetes controller](https://github.com/krateoplatformops/rest-dynamic-controller)
   - a [read-only HTTP API for querying current Kubernetes resources](https://github.com/krateoplatformops/resources-presenter)

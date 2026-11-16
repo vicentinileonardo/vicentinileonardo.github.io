@@ -21,7 +21,7 @@ links:
 
 - A **dynamic Kubernetes controller** that manages external REST API resources.
 - Deployed by the OASGen Provider framework for each generated resource type.
-- One of the core platform components I designed and developed at Krateo PlatformOps.
+- One of the core platform components I evolved at Krateo PlatformOps.
 
 ## What I did
 
