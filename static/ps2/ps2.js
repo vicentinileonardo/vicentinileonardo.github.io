@@ -1,4 +1,7 @@
-/* PS2-style menu for leonardovicentini.com. Content comes from /ps2.json, built from the Markdown pages. */
+/* PS2-style menu for leonardovicentini.com.
+   This file is the source: edit it directly (see docs/PS2.md). Text does NOT live here: it comes from
+   /ps2.json, which Hugo builds from the Markdown pages in content/ (layouts/index.ps2.json).
+   Exceptions: the System Configuration panels (CONF, CONF_FULL) and Quick View (#qv) below. */
 (async () => {
 const ON = () => document.documentElement.classList.contains('ps2');
 if (!ON()) return;
@@ -39,7 +42,6 @@ new ResizeObserver(() => { if (typeof setLayout === 'function') setLayout(); }).
 /* ---------- state ---------- */
 const S = {scene:'boot', menu:0, dev:0, card:0, save:0, opt:0, conf:0, clock:true, t0:performance.now(), tint:0};
 const layers = {boot:'#Lboot', menu:'#Lmenu', root:'#Lroot', card:'#Lcard', save:'#Lsave', conf:'#Lconf', ver:'#Lver'};
-const TAB = {boot:'A', menu:'A', ver:'A', root:'B', card:'B', save:'B', conf:'C'};
 let bootTimer = 0, nav = 0;
 
 function show(scene){
@@ -51,9 +53,6 @@ function show(scene){
   stage.classList.toggle('bands-on', scene !== 'boot' && !browser);
   stage.classList.toggle('menu-top', scene === 'menu');
   stage.classList.toggle('nob', browser);
-  const tab = TAB[scene];
-  document.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', t.dataset.tab === tab));
-  document.querySelectorAll('.note').forEach(n => n.classList.toggle('on', n.dataset.note === tab));
   render();
   syncURL();
   if (reduce) draw(performance.now());
@@ -577,7 +576,6 @@ function render(){
     const d1 = document.createElement('p'); d1.textContent = p.d; sd.append(d1);
     // the full story lives in Details; here only the one-liner and a plain tech line, console style
     const tl = document.createElement('p'); tl.className = 'tl'; tl.textContent = (p.tags && p.tags.length ? p.tags : [p.m || p.c]).join(' · '); sd.append(tl);
-    if (p.dr) { const dr = document.createElement('p'); dr.className = 'dr'; dr.textContent = 'Draft text'; sd.append(dr); }
     // sit the description just under the option list, whatever its length
     requestAnimationFrame(() => { const o = $('#opts'); sd.style.top = (o.offsetTop + o.offsetHeight + 22) + 'px'; });
   }
